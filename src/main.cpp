@@ -6,7 +6,7 @@
 #include "../include/Common.hpp"
 
 int main() {
-    Common::file->setFileStr("outFile.mcfunction");
+    Common::file->setFileStr("outFile2.mcfunction");
     Scoreboard::Objectives test0("test0", "dummy", "{\"text\":\"TEST0\"}");
 
 
