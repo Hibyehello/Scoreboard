@@ -8,6 +8,11 @@
 class File {
     public:
 
+    static File &getInstance() {
+        static File instance;
+        return instance;
+    }
+
     void print(std::string _str) { file << _str; }
 
     void setFileStr(std::string _fileStr) { fileStr = _fileStr; file.open(fileStr); }
@@ -19,6 +24,7 @@ class File {
     ~File() { file.close(); }
 
     private:
+    File() {}
     std::string fileStr;
     std::ofstream file;
 };

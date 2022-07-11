@@ -4,7 +4,7 @@
 using namespace Scoreboard;
 
 void Scoreboard::Objectives::add() {
-    Common::file.write("TESTING3\n");
+    Common::file->write("TESTING4\n");
     // std::cout << "test\n";
     // print("TEST");
     // file << "TEST";
