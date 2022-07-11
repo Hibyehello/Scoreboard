@@ -3,10 +3,10 @@
 
 // #include "../include/File.hpp"
 #include "../include/Scoreboard.hpp"
+#include "../include/Common.hpp"
 
 int main() {
-    File::setFileStr("../outFile.mcfunction");
-
+    Common::file.setFileStr("outFile.mcfunction");
     Scoreboard::Objectives test0("test0", "dummy", "{\"text\":\"TEST0\"}");
 
 
@@ -15,8 +15,6 @@ int main() {
     // test0.rendertype(Scoreboard::RenderType::hearts);
     // test0.displayname("{\"text\":\"TEST0\",\"color\":\"dark_aqua\"}");
     // test0.remove();
-
-    File::file.close();
 
     return 0;
 }

@@ -14,8 +14,13 @@ namespace Scoreboard {
     class Objectives {
         public:
         Objectives(std::string _name, std::string _type = "dummy") : name(_name), type(_type) {}
+
         Objectives(std::string _name, std::string _type, std::string _display) : 
-            name(_name), type(_type), displayName(_display) { add(); };
+            name(_name), type(_type), displayName(_display)
+            { 
+                std::cout << "test1\n";
+                add(); 
+            };
         
         void list();
         void remove();

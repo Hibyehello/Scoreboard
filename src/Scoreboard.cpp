@@ -1,10 +1,11 @@
 #include "../include/Scoreboard.hpp"
+#include "../include/Common.hpp"
 
 using namespace Scoreboard;
 
 void Scoreboard::Objectives::add() {
-    File::file << "TEST";
-    // std::cout << "test";
+    Common::file.write("TESTING3\n");
+    // std::cout << "test\n";
     // print("TEST");
     // file << "TEST";
     // File::file << scoreboardText << "add " << name << " " << type;

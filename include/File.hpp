@@ -5,13 +5,20 @@
 #include <string>
 #include <vector>
 
-namespace File {
-    // public:
-    static std::string fileStr;
-    static std::ofstream file;
+class File {
+    public:
 
-    static void print(std::string _str) { file << _str; }
+    void print(std::string _str) { file << _str; }
 
-    static void setFileStr(std::string _fileStr) { fileStr = _fileStr; file.close(); file.open(fileStr); }
-    static std::string getFileStr() { return fileStr; }
+    void setFileStr(std::string _fileStr) { fileStr = _fileStr; file.open(fileStr); }
+    std::string getFileStr() { return fileStr; }
+
+    template<typename T>
+    void write(T input) { file << input;}
+
+    ~File() { file.close(); }
+
+    private:
+    std::string fileStr;
+    std::ofstream file;
 };
